@@ -1,0 +1,16 @@
+<div class="container">
+    <br>
+    <div class="row">
+
+        <h2>Hard y Soft Skills</h2>
+        <div>
+
+            <circle-progress class="col-sm-12 col-md-4 col-lg-3" *ngFor="let item of hysArray" [percent]="item.percent" [radius]="100" [title]="item.title" [showUnits]="false" [showSubtitle]="false" [outerStrokeWidth]="16" [innerStrokeWidth]="3" [outerStrokeColor]="'lightblue'"
+                [innerStrokeColor]="'lightblue'" [animation]="true" [animationDuration]="600"></circle-progress>
+
+
+
+        </div>
+
+    </div>
+</div>

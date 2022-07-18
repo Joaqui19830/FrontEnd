@@ -1,0 +1,41 @@
+.rounded-container {
+    width: 50px;
+    height: 50px;
+    background: lightblue;
+    border-radius: 500px;
+}
+
+.info {
+    font-size: 25px;
+    ;
+}
+
+.mt {
+    margin-top: 30px;
+}
+
+.btn {
+    float: right;
+    margin: -76px;
+    margin-inline-end: -859px;
+    margin-top: -60px;
+}
+
+.facebook-icon {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    margin-left: 922px;
+    background-size: cover;
+    background-image: url('../../../../assets/images/icons/facebook.png');
+}
+
+.instagram-icon {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-image: url('../../../../assets/images/icons/instagram.png');
+    margin-left: 870px;
+    margin-top: -25px;
+}
