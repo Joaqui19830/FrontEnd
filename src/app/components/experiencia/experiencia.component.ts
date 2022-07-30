@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Experiencia } from '../../model/experiencia';
+import { ExperienciaService } from '../../service/experiencia.service';
 
 @Component({
   selector: 'app-experiencia',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperienciaComponent implements OnInit {
 
-  constructor() { }
+  experiencia: Experiencia[] = [];
 
-  ngOnInit(): void {
+  constructor(private expeService: ExperienciaService) { }
+
+  ngOnInit(): void { 
+    this.cargarExperiencia();
+  }
+
+  cargarExperiencia():void{
+    this.expeService.lista()
+    .subscribe(data => this.experiencia = data);
   }
 
 }

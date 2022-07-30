@@ -27,7 +27,7 @@
     height: 25px;
     margin-left: 922px;
     background-size: cover;
-    background-image: url('../../../../assets/images/icons/facebook.png');
+    background-image: url('../../../assets/images/icons/facebook.png');
 }
 
 .instagram-icon {
@@ -35,7 +35,7 @@
     width: 25px;
     height: 25px;
     background-size: cover;
-    background-image: url('../../../../assets/images/icons/instagram.png');
+    background-image: url('../../../assets/images/icons/instagram.png');
     margin-left: 870px;
     margin-top: -25px;
 }

@@ -4,6 +4,7 @@
     height: 470px;
     background-size: cover;
     background-image: url('../../../assets/images/argentina-programa-banner.jpg');
+    position: relative;
 }
 
 .usuario-icon {
@@ -13,6 +14,14 @@
     margin-top: 416px;
     background-size: cover;
     background-image: url('../../../assets//images/icons/usuario-de-perfil.png');
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    position: absolute;
+    bottom: -40px;
 }
 
 

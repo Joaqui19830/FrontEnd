@@ -6,36 +6,21 @@
                     <div class="rounded-container"></div>
                 </div>
                 <div class="col" style="background: orange">Argentina Programa</div>
-
-
-
             </div>
-
         </div>
-
 
         <div class="col">
             <div (click)="onFacebookIconClicked()" class="facebook-icon"></div>
             <div (click)="onInstagramIconClicked()" class="instagram-icon"></div>
         </div>
 
-
-
-
         <div class="col-4 mt-2">
-            <button type="button" class="btn btn-dark">
+            <button *ngIf="!storageService.getLoggedStatus()" type="button" class="btn btn-dark" (click)="loginButtonClicked()">
         Login
+      </button>
+            <button *ngIf="storageService.getLoggedStatus()" type="button" class="btn btn-dark" (click)="logoutButtonClicked()">
+        Logout
       </button>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
 </div>

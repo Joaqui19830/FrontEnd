@@ -1,3 +1,19 @@
 .info {
     margin-top: 86px;
 }
+
+.btn {
+    width: 60px;
+    margin-right: 30px;
+    margin-left: 363px;
+}
+
+.bot {
+    width: 60px;
+    margin-left: -165px
+}
+
+.bi-pencil-fill::before {
+    content: "\f4c9";
+    width: 25px;
+}
