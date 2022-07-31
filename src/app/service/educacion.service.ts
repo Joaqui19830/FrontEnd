@@ -2,19 +2,20 @@ import { Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Educacion } from '../model/educacion';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class EducacionService {
-  educURL = 'http://localhost:8080/'; 
+  
  
   
   constructor(private http:HttpClient) { }
 
   public lista():Observable<Educacion[]>{
-    return   this.http.get<Educacion[]>(this.educURL + 'ver/educacion');
+    return   this.http.get<Educacion[]>(environment.baseUrl + '/ver/educacion');
   }
 
   // public detail(id:number):Observable<Educacion>{

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { IPersona } from '../model/persona.model';
+import { environment } from '../../environments/environment';
 
 
 
@@ -9,8 +10,6 @@ import { IPersona } from '../model/persona.model';
   providedIn: 'root',
 })
 export class PersonaService {
-  private URL = 'http://localhost:8080/ver/';
-  
 
   persona?: IPersona;
 
@@ -22,7 +21,7 @@ export class PersonaService {
 
   private getPersona() {
     this.http
-      .get<IPersona>(this.URL + 'personas')
+      .get<IPersona>(environment.baseUrl + '/ver/personas')
       .subscribe((personas: any) => {
         console.log(personas);
         
