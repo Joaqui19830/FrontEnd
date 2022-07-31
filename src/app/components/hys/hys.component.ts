@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from 'src/app/service/storage.service';
 import { Skills } from '../../model/skills';
 import { SkillsService } from '../../service/skills.service';
 
@@ -35,7 +36,7 @@ export class HysComponent implements OnInit {
     
   ]
 
-  constructor(private skilService: SkillsService) { }
+  constructor(private skilService: SkillsService, public storageService: StorageService) { }
 
   ngOnInit(): void {
     this.cargarSkills();
@@ -45,5 +46,12 @@ export class HysComponent implements OnInit {
     this.skilService.lista()
     .subscribe(data=> this.skills = data)
   }
+  
+  EditarButtonClicked(){
+   
+  }
 
+  BorrarButtonClicked(){
+
+  }
 }

@@ -16,7 +16,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { RedesComponent } from './components/redes/redes.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-// import { NewEducacionComponent } from './educacion/new-educacion.component';
+
 
 
 
@@ -34,7 +34,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     LoginComponent,
     RedesComponent,
-    // NewEducacionComponent,
+    
     
   
    

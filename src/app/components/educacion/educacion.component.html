@@ -1,34 +1,25 @@
-<!-- <div class="container overflow-hidden">
-    <div class="row gy-5">
-
-        <h2>Educacion</h2>
-
-        <table>
-            <tbody>
-                <tr>
-                    <td>NOMBRE DE LA EDUCACION</td>
-                    <td>DESCRIPCION DE LA EDUCACION</td>
-                    <td>EDITAR</td>
-                    <td>BORRAR</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div> -->
-
 <div class="container overflow-hidden">
     <div class="row gy-5">
         <div class="col-6">
             <br />
-            <div>
+            <div class="title-c infPers">
                 <h2>Educacion</h2>
+                <button *ngIf="storageService.getLoggedStatus()" class="btn btn-primary bi bi-pencil-fill" (click)="EditarButtonClicked()"></button>
+                <button *ngIf="storageService.getLoggedStatus()" class="bot btn btn-danger bi bi-x-lg" (click)="BorrarButtonClicked()"></button>
             </div>
             <br />
             <div class="p-3 border bg-light" *ngFor="let Educacion of educacion">
-                {{ Educacion.title }}
+                Titulo: {{ Educacion.title }}
             </div>
+            <div class="p-3 border bg-light info" *ngFor="let Educacion of educacion">
+                Descripcion: {{ Educacion.descriptionEducation}}
+            </div>
+            <div class="p-3 border bg-light info" *ngFor="let Educacion of educacion">
+                Duracion: {{ Educacion.duration}}
+            </div>
+
         </div>
-        <div class="col-6">
+        <!-- <div class="col-6">
             <div class="p-3 border bg-light info" *ngFor="let Educacion of educacion">
                 {{ Educacion.descriptionEducation }}
                 <div *ngIf="storageService.getLoggedStatus()">
@@ -42,6 +33,6 @@
         </div>
         <div class="col-6">
             <div class="p-3 border bg-light">Descripcion</div>
-        </div>
+        </div> -->
     </div>
 </div>

@@ -14,8 +14,8 @@ import { StorageService } from '../../service/storage.service';
 })
 export class LoginComponent implements OnInit {
   miFormulario: FormGroup = this.fb.group({
-    username: ['joako', [Validators.required]],
-    password: ['tomate19830', [Validators.required, Validators.minLength(6)]],
+    username: ['', [Validators.required]],
+    password: ['', [Validators.required, Validators.minLength(6)]],
   });
 
   constructor(

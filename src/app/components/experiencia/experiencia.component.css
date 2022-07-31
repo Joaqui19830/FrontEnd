@@ -17,7 +17,24 @@
     margin-left: -165px
 }
 
-.bi-pencil-fill::before {
-    content: "\f4c9";
-    width: 25px;
+.title-c {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+
+button {
+    width: 42px;
+    height: 42px;
+    border-radius: 50px;
+    margin-left: 16px;
+}
+
+.info {
+    margin-top: 16px;
+}
+
+.infPers {
+    margin-top: 45px;
 }

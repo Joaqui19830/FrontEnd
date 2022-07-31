@@ -1,13 +1,25 @@
 <div class="container overflow-hidden">
     <div class="row gx-5">
         <div class="col">
-            <div class="infPers">
+            <div class="title-c infPers">
                 <h2>Informacion Personal</h2>
+
+                <button *ngIf="storageService.getLoggedStatus() && !isFormEditable" class="btn btn-primary bi bi-pencil-fill" (click)="updateStateEditable()"></button>
+                <button *ngIf="storageService.getLoggedStatus() && isFormEditable" class="btn btn-success bi bi-check" (click)="confirmarFormulario()"></button>
+                <button *ngIf="storageService.getLoggedStatus() && isFormEditable" class="btn btn-danger bi bi-x" (click)="cancelarEditado()"></button>
             </div>
-            <br>
-            <div class="p-3 border bg-light nom" id="nombre">Nombre completo: {{personaS.persona?.nombre}} {{personaS.persona?.apellido}}</div>
-            <div class="p-3 border bg-light info">Email: {{personaS.persona?.email}}</div>
-            <div class="p-3 border bg-light info">Edad: {{personaS.persona?.edad}} años</div>
+
+            <br />
+            <div class="p-3 border bg-light nom" id="nombre">
+                Nombre:
+                <input id="name" type="text" [formControl]="name!" [value]="personaS.persona?.nombre" />
+            </div>
+            <div class="p-3 border bg-light info">
+                Email: {{ personaS.persona?.email }}
+            </div>
+            <div class="p-3 border bg-light info">
+                Edad: {{ personaS.persona?.edad }} años
+            </div>
         </div>
     </div>
 </div>

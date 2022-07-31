@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from 'src/app/service/storage.service';
 import { Experiencia } from '../../model/experiencia';
 import { ExperienciaService } from '../../service/experiencia.service';
 
@@ -11,7 +12,7 @@ export class ExperienciaComponent implements OnInit {
 
   experiencia: Experiencia[] = [];
 
-  constructor(private expeService: ExperienciaService) { }
+  constructor(private expeService: ExperienciaService, public storageService: StorageService) { }
 
   ngOnInit(): void { 
     this.cargarExperiencia();
@@ -19,7 +20,15 @@ export class ExperienciaComponent implements OnInit {
 
   cargarExperiencia():void{
     this.expeService.lista()
-    .subscribe(data => this.experiencia = data);
+    .subscribe((data) => (this.experiencia = data));
+  }
+
+  EditarButtonClicked(){
+    
+  }
+
+  BorrarButtonClicked(){
+  
   }
 
 }

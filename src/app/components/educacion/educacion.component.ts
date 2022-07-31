@@ -21,4 +21,13 @@ export class EducacionComponent implements OnInit {
   cargarEducacion(): void {
     this.eduService.lista().subscribe((data) => (this.educacion = data));
   }
+
+  EditarButtonClicked(){
+    
+  }
+
+  BorrarButtonClicked(){
+  
+  }
 }
+ 

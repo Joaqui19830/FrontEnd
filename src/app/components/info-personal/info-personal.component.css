@@ -5,3 +5,17 @@
 .infPers {
     margin-top: 45px;
 }
+
+.title-c {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+
+button {
+    width: 42px;
+    height: 42px;
+    border-radius: 50px;
+    margin-left: 16px;
+}

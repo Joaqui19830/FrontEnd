@@ -1,0 +1,28 @@
+.title-c {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+
+button {
+    width: 42px;
+    height: 42px;
+    border-radius: 50px;
+    margin-left: 16px;
+}
+
+.info {
+    margin-top: 86px;
+}
+
+.btn {
+    width: 60px;
+    margin-right: 30px;
+    margin-left: 363px;
+}
+
+.bot {
+    width: 60px;
+    margin-left: -165px
+}
