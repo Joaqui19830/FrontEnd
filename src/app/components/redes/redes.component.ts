@@ -27,13 +27,10 @@ export class RedesComponent implements OnInit {
   }
 
   onFacebookIconClicked(){
-    window.open('https://www.facebook.com/')
+    window.open('https://www.facebook.com/joaquin.carrizo.92')
     
   }
-  onInstagramIconClicked(){
-    window.open('https://www.instagram.com/')
-    
-  }
+ 
 
   loginButtonClicked(){
     this.router.navigateByUrl('/login');
