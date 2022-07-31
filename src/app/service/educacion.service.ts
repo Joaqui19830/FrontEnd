@@ -19,20 +19,20 @@ export class EducacionService {
   }
 
   // public detail(id:number):Observable<Educacion>{
-  //   return this.http.get<Educacion>(this.educURL + `educacion/delete/${id}`);
+  //   return this.http.get<Educacion>(environment.baseUrl + `educacion/delete/${id}`);
   // }
 
   public save(educacion: Educacion):Observable<any>{
-    return this.http.post<any>(this.educURL + `new/educacion`, educacion);
+    return this.http.post<any>(environment.baseUrl + `/new/educacion`, educacion);
   }
 
   //Actualizar
   public update(id:number, educacion:Educacion):Observable<any>{
-    return this.http.put<any>(this.educURL + `update/${id}`, educacion);
+    return this.http.put<any>(environment.baseUrl + `/update/${id}`, educacion);
   }
 
   public delete(id:number):Observable<any>{
-    return this.http.delete<any>(this.educURL + `educacion/delete/${id}`);
+    return this.http.delete<any>(environment.baseUrl + `/educacion/delete/${id}`);
   }
  
 
